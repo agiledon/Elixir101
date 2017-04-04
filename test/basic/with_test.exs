@@ -25,4 +25,12 @@ defmodule Basic.WithTest do
              end
     assert result == {:error, 3}
   end
+
+  test "return area giving right opts" do
+    assert area_for_right_case() == {:ok, 150}
+  end
+
+  test "return error giving wrong opts" do
+    assert area_for_wrong_case() == :error
+  end
 end
